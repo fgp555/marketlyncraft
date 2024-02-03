@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  background-color: peru;
+}
+header,
+footer {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 5vw;
+  & nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+  }
+}
+footer {
+  justify-content: center;
+}
+
+main {
+  min-height: 70vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.btn,
+button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  margin: 0.3em;
+  background-color: transparent;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.btn:hover,
+button:hover {
+  opacity: 0.7;
+}
+
+.dark {
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+}
+
+video {
+  max-width: 100%;
+  padding: 1em 5vw;
+  box-sizing: border-box;
+}

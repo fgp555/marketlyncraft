@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head.ejs") %>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <main>
+      <% if (user) { %>
+      <h1>Welcome, <%= user.displayName %>!</h1>
+      <img src="<%= user.photos[0].value %>" alt="Profile Image" width="100" />
+      <p>Email: <%= user.emails[0].value %></p>
+      <a href="/logout" class="btn dark">Logout</a>
+      <% } else { %>
+      <p>You are not authenticated. Please <a href="/auth/google">login with Google</a>.</p>
+      <% } %>
+    </main>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("partials/head.ejs") %>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <main>
+      <h1>Videos</h1>
+      <section>
+        <aside>
+          <h2>One Drive</h2>
+
+          <!-- <base href="" /> -->
+          <video class="no-right-click" controls poster="https://frankgp123456789012345.on.drv.tw/media/poster.jpg" controlsList="nodownload">
+            <source src="https://frankgp123456789012345.on.drv.tw/media/480p.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <script>
+            // Get all video elements with the class 'no-right-click'
+            var videos = document.querySelectorAll(".no-right-click");
+
+            // Loop through each video element and disable the right-click context menu
+            videos.forEach(function (video) {
+              video.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+              });
+            });
+          </script>
+        </aside>
+      </section>
+    </main>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>
